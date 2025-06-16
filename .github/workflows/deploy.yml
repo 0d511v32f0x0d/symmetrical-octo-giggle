@@ -1,5 +1,6 @@
 name: Deploy EMS Guide to GitHub Pages
 
+
 on:
   push:
     branches:
@@ -12,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Install mdBook
         uses: peaceiris/actions-mdbook@v1
